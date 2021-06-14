@@ -1,27 +1,24 @@
 <nav class="navbar navbar-expand-lg" id="header">
-    <a class="navbar-brand" href="#header">
+    <a class="navbar-brand" class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent">
         <img src="../../assets/images/menu.png" class="logo img-fluid">
     </a>
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
-    </button> -->
+    <li class="nav-item li">
+        <a class="nav-link active" target="_self">
+            <h4>REELVILLE</h4>
+        </a>
+    </li>
+    <li class="nav-item li1">
+        <form class="navbar-form navbar-left">
+            <div class="input-group mb-3 searchbox">
+                <input type="text" class="search-box" placeholder="Search" #searchInput>
+                <div class="input-group-append search-icon">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </div>
+        </form>
+    </li>
     <div id="navbarContent" class='collapse navbar-collapse'>
         <ul class="nav navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active" target="_self">
-                    <h4>REELVILLE</h4>
-                </a>
-            </li>
-            <li class="nav-item">
-                <form class="navbar-form navbar-left">
-                    <div class="input-group mb-3 searchbox">
-                        <input type="text" class="search-box" placeholder="Search" #searchInput>
-                        <div class="input-group-append search-icon">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </form>
-            </li>
             <li class="nav-item">
                 <a class="nav-link active" target="_self">
                     Post
@@ -52,11 +49,16 @@
                     Broadcast
                 </a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link">
-                    <i class="fas fa-bell fa-4x"></i><span class="sec counter counter-lg"></span>
+                    <i class="fa fa-bell" style="font-size:36px;color:white"></i><span class="sec counter counter-lg dot"></span>
                 </a>
-            </li> -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <img src="../../assets/images/profile.jpg" alt="Avatar" class="profile">
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
