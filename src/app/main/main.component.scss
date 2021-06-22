@@ -1,0 +1,383 @@
+main {
+    margin-bottom: 10px;
+    .movie-section {
+        position: relative;
+        .sec-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 10px;
+            .pipe {
+                margin: 0;
+                margin-right: 20px;
+                height: 2.5rem;
+                border: 3px solid #49c6ed;
+                border-radius: 3px;
+            }
+            .head-txt {
+                float: left;
+                display: flex;
+                h2 {
+                    font-weight: 500;
+                    font-size: 28px;
+                    margin: 0;
+                }
+            }
+            .link {
+                float: right;
+                .see-all {
+                    border-radius: 30px;
+                    border: 2px solid #6e6e70;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    color: #c1c1c2;
+                }
+                .car-nav {
+                    margin-right: 20px;
+                    span {
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        h2 {
+            color: whitesmoke;
+        }
+    }
+    .video-info {
+        padding: 30px 0;
+        .heading {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            img {
+                max-width: 60px !important;
+                border-radius: 50%;
+                height: 60px !important;
+                display: block;
+                float: left;
+            }
+            p {
+                padding-left: 10px;
+                font-size: 32px;
+                font-weight: 700;
+                color: whitesmoke;
+            }
+        }
+        .info {
+            font-size: 14px;
+            .pipe {
+                margin: 0 10px;
+            }
+            span {
+                color: whitesmoke;
+            }
+        }
+        .options {
+            display: flex;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            span {
+                border-radius: 30px;
+                border: 2px solid;
+                padding: 10px 20px;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+            .fav {
+                background: #49c6ed;
+                border-color: #49c6ed;
+                color: black;
+            }
+            .opinion {
+                background: #ffffff;
+                border-color: #fff;
+                color: black;
+            }
+            .flag,
+            .share {
+                border-color: #848486;
+                color: #e0e0e1;
+                fa-icon {
+                    margin-right: 5px;
+                }
+            }
+        }
+        hr {
+            margin-top: 3rem;
+            border-color: #333335;
+        }
+        .hr {
+            hr {
+                height: 3px;
+                color: whitesmoke;
+            }
+        }
+    }
+
+    ::ng-deep {
+        .slide {
+            height: 300px !important;
+        }
+        .owl-dots {
+            display: none;
+        }
+        .owl-item {
+            width: 325px !important;
+            height: 330px !important;
+        }
+        .owl-carousel .owl-item img {
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            height: 220px;
+            width: 100%;
+        }
+        .owl-theme .owl-nav {
+            display: none;
+        }
+        .slide {
+            margin: 0 10px;
+            border: 2px solid #0b0b0d;
+            border-radius: 25px;
+            .image {
+                position: relative;
+                border-radius: 25px;
+                video {
+                    width: 100%;
+                    height: 100%;
+                }
+                .pointer {
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                }
+            }
+            .image:hover {
+                img {
+                    display: none;
+                }
+                video {
+                    display: block;
+                }
+            }
+            .profile-pic {
+                padding: 0;
+                display: block;
+                position: absolute;
+                bottom: -18px;
+                left: 15px;
+                border-radius: 100%;
+                img {
+                    width: 40px;
+                    border-radius: 50%;
+                    height: 35px;
+                }
+            }
+            .details {
+                padding: 25px 20px 20px;
+                background: #1a1a1a;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                .head {
+                    h3 {
+                        font-size: 18px;
+                        color: whitesmoke;
+                    }
+                }
+                .name {
+                    font-weight: 600;
+                    color: #727272;
+                    margin-bottom: 5px;
+                }
+                .more-info {
+                    font-size: 14px;
+                    span {
+                        color: #727272;
+                    }
+                }
+            }
+        }
+        .slide:hover {
+            border-color: #3dbffc;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .heading p {
+            padding-left: 10px;
+            font-size: 26px;
+        }
+        .options {
+            span {
+                border-radius: 20px;
+                border: 2px solid;
+                padding: 10px 15px;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .movie-section {
+            .sec-head {
+                .head-txt {
+                    flex: calc(100% - 100px);
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+                hr {
+                    margin-right: 8px;
+                    border: 2px solid #1cbfff;
+                }
+                .link {
+                    margin: 0;
+                    .see-all {
+                        padding: 5px 10px;
+                    }
+                    .car-nav {
+                        display: none;
+                    }
+                }
+            }
+        }
+        ::ng-deep {
+            .slide {
+                margin: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .video-info {
+            .options {
+                span {
+                    flex: 100%;
+                    margin: 0 0 15px;
+                    text-align: center;
+                }
+            }
+        }
+        ::ng-deep {
+            .plyr {
+                .plyr__controls {
+                    max-width: calc(100% - 50px);
+                }
+            }
+        }
+    }
+
+    ::ng-deep {
+        label {
+            margin-bottom: 0px;
+        }
+        .plyr {
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .plyr--video .plyr__controls {
+            padding: 10px !important;
+            padding: var(--plyr-control-spacing, 10px) !important;
+            padding-top: 35px !important;
+            padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5) !important;
+        }
+        .title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            padding: 20px;
+        }
+        .plyr--hide-controls .title {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .plyr--hide-controls .button {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .plyr__controls {
+            justify-content: flex-start !important;
+        }
+        .left-arrow {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 2%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 2rem;
+            z-index: 999;
+        }
+        .right-arrow {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            right: 2%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 2rem;
+            z-index: 999;
+        }
+        .down-arrow {
+            margin: 0;
+            position: absolute;
+            bottom: 15%;
+            left: 50%;
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 2rem;
+            z-index: 999;
+        }
+        .plyr__time + .plyr__time:before {
+            content: "" !important;
+        }
+        .plyr__progress input[type="range"] {
+            cursor: pointer;
+            color: #49c6ed;
+        }
+        .plyr__volume input[type="range"] {
+            cursor: pointer;
+            color: #49c6ed;
+        }
+        .plyr--video .plyr__control:hover {
+            background-color: #49c6ed;
+        }
+        .bottom-control {
+            display: flex;
+            margin-left: -6px;
+        }
+        .top-control {
+            bottom: 40px;
+            position: absolute;
+            width: 98%;
+        }
+        .plyr__control--overlaid {
+            background-color: #49c6ed;
+        }
+        .bottom-control {
+            width: 100%;
+        }
+        .plyr--fullscreen-enabled [data-plyr="fullscreen"] {
+            align-self: flex-start;
+            margin-left: auto;
+        }
+        .plyr__time--current {
+            float: left;
+        }
+        .plyr__time--duration {
+            float: right;
+        }
+        .plyr__progress__buffer {
+            top: 31px;
+        }
+    }
+    @media only screen and (max-width: 425px) {
+        .video-info .heading p {
+            font-size: 25px !important;
+        }
+    }
+}

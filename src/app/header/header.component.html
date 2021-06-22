@@ -1,0 +1,56 @@
+<header class="header">
+    <div class="container-fluid pl-4 pr-4">
+        <nav class="navbar navbar-expand-lg">
+            <span class="menu">
+                <img src="assets/images/menu.png" alt="menu" >
+            </span>
+            <span class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                (click)="isMobileMenuOpen = !isMobileMenuOpen">
+                <img src="assets/images/menu.png" alt="menu">
+            </span>
+            <a class="navbar-brand" [routerLink]="">
+                <img src="assets/images/REELVILLE.png" alt="reelville">
+            </a>
+            <form class="form-inline my-2 my-lg-0">
+                <span class="search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+            </form>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isMobileMenuOpen">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink]="">Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="">Opinions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="">Top Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="">Talent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="">Connect Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="">Broadcast</a>
+                    </li>
+                </ul>
+                <div class="profile">
+                    <div class="text-center">
+                        <span class="bell">
+                            <img src="../../assets/images/bell.png" class="bell">
+                            <span class="red-dot"></span>
+                        </span>
+                        <a class="profile-pic" [routerLink]="">
+                            <img src="../../assets/images/profile.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
