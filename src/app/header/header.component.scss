@@ -11,7 +11,7 @@ header {
         padding: 0 10px;
         margin-right: 0;
     }
-    .nav-item{
+    .nav-item {
         padding-right: 40px;
     }
     .menu,
@@ -22,12 +22,12 @@ header {
             cursor: pointer;
         }
     }
-    .nav-link{
+    .nav-link {
         color: whitesmoke;
         font-size: 15px;
     }
     .form-inline {
-        ::placeholder{
+        ::placeholder {
             color: whitesmoke;
         }
         float: left;
@@ -46,7 +46,7 @@ header {
                 color: white;
                 font-weight: bold;
             }
-            .fa-search{
+            .fa-search {
                 margin-top: 10px;
                 position: relative;
                 right: 15%;
