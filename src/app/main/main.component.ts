@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faFlag, faPlayCircle } from '@fortawesome/free-regular-svg-icons';
-import { faShareAlt, faCompress } from '@fortawesome/free-solid-svg-icons';
-
 declare var Plyr;
 
 @Component({
@@ -15,10 +12,6 @@ export class MainComponent implements OnInit {
   player: any;
   videoList: any;
   VideoList: any;
-  faFlag = faFlag;
-  faShareAlt = faShareAlt;
-  faCompress = faCompress;
-  faPlay = faPlayCircle;
   interval;
   listVideo;
   customOptions: any = {
