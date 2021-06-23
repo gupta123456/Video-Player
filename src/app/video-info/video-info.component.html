@@ -1,0 +1,35 @@
+<div class="video-info">
+    <div class="container-fluid pl-4 pr-4">
+        <div class="row">
+            <div class="heading">
+                <img src="assets/images/profile.jpg">
+                <p>{{VideoName}} (Official Video)</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="info">
+                    <span class="views">{{views}} views</span> <span class="pipe">|</span>
+                    <span class="date">Premiered on {{date}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="">
+                <div class="options">
+                    <span class="fav"> Add to Favorites </span>
+                    <span class="opinion"> Opinion</span>
+                    <span class="flag">
+                        <fa-icon [icon]="faFlag"></fa-icon> Flag
+                    </span>
+                    <span class="share">
+                        <fa-icon [icon]="faShareAlt"></fa-icon> Share
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="hr">
+            <hr>
+        </div>
+    </div>
+</div>

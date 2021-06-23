@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faFlag, faPlayCircle } from '@fortawesome/free-regular-svg-icons';
 import { faShareAlt, faCompress } from '@fortawesome/free-solid-svg-icons';
-import { OwlOptions } from 'ngx-owl-carousel-o';
 
 declare var Plyr;
 
@@ -16,17 +15,19 @@ export class MainComponent implements OnInit {
   player: any;
   videoList: any;
   VideoList: any;
-  VideoName: string = 'Money Heist'
-  views: string = '782,380';
-  date: string = '23 Feb 2021';
   faFlag = faFlag;
   faShareAlt = faShareAlt;
   faCompress = faCompress;
   faPlay = faPlayCircle;
-  customOptions: OwlOptions = {
+  interval;
+  listVideo;
+  customOptions: any = {
     rewind: false,
     nav: true,
     dots: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
     responsive: {
       0: {
       },
@@ -45,10 +46,13 @@ export class MainComponent implements OnInit {
     },
   }
 
-  customOptions1: OwlOptions = {
+  customOptions1: any = {
     rewind: false,
     nav: true,
     dots: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
     responsive: {
       0: {
       },
@@ -233,15 +237,10 @@ export class MainComponent implements OnInit {
     this.player.play();
   }
 
-  interval;
-  promise;
-  listVideo;
   mouseEnter(i, listType) {
     this.listVideo = document.querySelector("." + listType + i);
     this.listVideo.play();
-    this.listVideo.currentTime = 10;
     this.interval = setInterval(() => {
-      console.log("setTimeOut");
       this.listVideo.currentTime = 10;
     }, 5000)
   }

@@ -2,42 +2,8 @@
     <video id="plyrID" playsinline controls poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
         <source [src]="url" type="video/mp4" />
     </video>
-    <div class="video-info">
-        <div class="container-fluid pl-4 pr-4">
-            <div class="row">
-                <div class="heading">
-                    <img src="assets/images/profile.jpg">
-                    <p>{{VideoName}} (Official Video)</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="info">
-                        <span class="views">{{views}} views</span> <span class="pipe">|</span>
-                        <span class="date">Premiered on {{date}}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="">
-                    <div class="options">
-                        <span class="fav"> Add to Favorites </span>
-                        <span class="opinion"> Opinion</span>
-                        <span class="flag">
-                            <fa-icon [icon]="faFlag"></fa-icon> Flag
-                        </span>
-                        <span class="share">
-                            <fa-icon [icon]="faShareAlt"></fa-icon> Share
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="hr">
-                <hr>
-            </div>
-        </div>
-    </div>
-    <div class="movie-section">
+    <app-video-info></app-video-info>
+    <div class="video-section">
         <div class="sec-head">
             <div class="head-txt">
                 <div class="pipe"></div>
@@ -61,12 +27,11 @@
                     <div class="slide">
                         <div class="image">
                             <span (click)="passURL(data.url)">
-                                <video [src]="data.url" class="pointer" width="200" height="120" [poster]="data.imagePreview"
-                                    class="videoPlayList{{i}}" (mouseenter)="mouseEnter(i,'videoPlayList')"
-                                    (mouseleave)="mouseLeave(i,'videoPlayList')">
+                                <video [src]="data.url" class="pointer" [poster]="data.imagePreview" (mouseenter)="mouseEnter(i,'video')"
+                                    (mouseleave)="mouseLeave(i,'video')">
                                 </video>
                             </span>
-                            <span class="profile-pic">
+                            <span class="bottom-left">
                                 <img src="assets/images/profile.jpg">
                             </span>
                         </div>
@@ -88,7 +53,7 @@
             </ng-container>
         </owl-carousel-o>
     </div>
-    <div class="movie-section">
+    <div class="video-section">
         <div class="sec-head">
             <div class="head-txt">
                 <div class="pipe"></div>
@@ -113,11 +78,11 @@
                         <div class="image">
                             <span (click)="passURL(data.url)">
                                 <video [src]="data.url" class="pointer" width="200" height="120" [poster]="data.imagePreview"
-                                    class="videoPlayListOne{{i}}" (mouseenter)="mouseEnter(i,'videoPlayListOne')"
-                                    (mouseleave)="mouseLeave(i,'videoPlayListOne')">
+                                    class="videoPlayListOne{{i}}" (mouseenter)="mouseEnter(i,'Video')"
+                                    (mouseleave)="mouseLeave(i,'Video')">
                                 </video>
                             </span>
-                            <span class="profile-pic">
+                            <span class="bottom-left">
                                 <img src="assets/images/profile.jpg" alt="Debut Infotech">
                             </span>
                         </div>
