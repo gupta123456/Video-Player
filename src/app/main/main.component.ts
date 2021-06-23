@@ -85,7 +85,7 @@ export class MainComponent implements OnInit {
       },
       {
         "title": "Breaking bad",
-        "url": "http://static.videogular.com/assets/videos/videogular.mp4",
+        "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
         "imagePreview": "../../assets/images/music.jpg",
         "views": 1.94 + "B",
         "date": "23 Mar 2021"
@@ -113,7 +113,7 @@ export class MainComponent implements OnInit {
       },
       {
         "title": "Breaking bad",
-        "url": "http://static.videogular.com/assets/videos/videogular.mp4",
+        "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
         "imagePreview": "../../assets/images/music.jpg",
         "views": 1.94 + "B",
         "date": "23 Mar 2021"
@@ -137,7 +137,7 @@ export class MainComponent implements OnInit {
       },
       {
         "title": "Breaking bad",
-        "url": "http://static.videogular.com/assets/videos/videogular.mp4",
+        "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
         "imagePreview": "../../assets/images/music.jpg",
         "views": 1.94 + "B",
         "date": "23 Mar 2021"
@@ -165,7 +165,7 @@ export class MainComponent implements OnInit {
       },
       {
         "title": "Breaking bad",
-        "url": "http://static.videogular.com/assets/videos/videogular.mp4",
+        "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
         "imagePreview": "../../assets/images/music.jpg",
         "views": 1.94 + "B",
         "date": "23 Mar 2021"
