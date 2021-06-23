@@ -227,23 +227,41 @@ export class MainComponent implements OnInit {
   passURL(url) {
     console.log(url);
     this.url = url;
+    window.scroll(0, 0);
     this.player.play();
   }
 
+  promise;
   mouseEnter(i, listType) {
-    this.listVideo = document.querySelector("." + listType + i);
-    this.listVideo.play();
-    this.interval = setInterval(() => {
+    try {
+      this.listVideo = document.querySelector("." + listType + i);
+      this.promise = this.listVideo.play();
+      this.listVideo.volume = 0;
       this.listVideo.currentTime = 10;
-    }, 5000)
+      this.interval = setInterval(() => {
+        console.log("setTimeOut");
+        this.listVideo.currentTime = 10;
+      }, 5000)
+    }
+    catch (e) {
+      console.log(e);
+    }
+
   }
 
   mouseLeave(i, listType) {
-    clearInterval(this.interval);
-    this.listVideo = document.querySelector("." + listType + i);
-    this.listVideo.pause();
-    this.listVideo.currentTime = 0;
-    this.listVideo.volume = 0;
+    try {
+      clearInterval(this.interval);
+      this.listVideo = document.querySelector("." + listType + i);
+      this.promise.then(() => {
+        this.listVideo.pause();
+      })
+      this.listVideo.currentTime = 0;
+      this.listVideo.volume = 0;
+    }
+    catch (error) {
+      console.log(error);
+    }
   }
 
 }

@@ -1,6 +1,6 @@
 <main>
-    <video id="plyrID" playsinline controls poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg">
-        <source [src]="url" type="video/mp4" />
+    <video id="plyrID" playsinline controls poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" [src]="url">
+        <!-- <source [src]="url" type="video/mp4" /> -->
     </video>
     <app-video-info></app-video-info>
     <div class="video-section">
@@ -27,7 +27,7 @@
                     <div class="slide">
                         <div class="image">
                             <span (click)="passURL(data.url)">
-                                <video [src]="data.url" class="pointer" [poster]="data.imagePreview" (mouseenter)="mouseEnter(i,'video')"
+                                <video [src]="data.url" class="pointer" [poster]="data.imagePreview" (mouseenter)="mouseEnter(i,'video')" class="video{{i}}"
                                     (mouseleave)="mouseLeave(i,'video')">
                                 </video>
                             </span>
@@ -78,7 +78,7 @@
                         <div class="image">
                             <span (click)="passURL(data.url)">
                                 <video [src]="data.url" class="pointer" width="200" height="120" [poster]="data.imagePreview"
-                                    class="videoPlayListOne{{i}}" (mouseenter)="mouseEnter(i,'Video')"
+                                    class="Video{{i}}" (mouseenter)="mouseEnter(i,'Video')"
                                     (mouseleave)="mouseLeave(i,'Video')">
                                 </video>
                             </span>
