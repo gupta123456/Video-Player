@@ -46,9 +46,6 @@ main {
         }
     }
     ::ng-deep {
-        .slide {
-            height: 300px !important;
-        }
         .owl-dots {
             display: none;
         }
@@ -64,71 +61,6 @@ main {
         }
         .owl-theme .owl-nav {
             display: none;
-        }
-        .slide {
-            margin: 0 10px;
-            border: 3px solid #0b0b0d;
-            border-radius: 25px;
-            .image {
-                position: relative;
-                border-radius: 25px;
-                height:173px !important;
-                video {
-                    width: 100%;
-                    height: 100%;
-                }
-                .pointer {
-                    border-top-left-radius: 25px;
-                    border-top-right-radius: 25px;
-                }
-            }
-            .image:hover {
-                img {
-                    display: none;
-                }
-                video {
-                    display: block;
-                }
-            }
-            .bottom-left {
-                padding: 0;
-                display: block;
-                position: absolute;
-                bottom: -18px;
-                left: 15px;
-                border-radius: 100%;
-                img {
-                    width: 40px;
-                    border-radius: 50%;
-                    height: 35px;
-                }
-            }
-            .details {
-                padding: 25px 20px 20px;
-                background: #1a1a1a;
-                border-bottom-left-radius: 25px;
-                border-bottom-right-radius: 25px;
-                .head {
-                    h3 {
-                        font-size: 18px;
-                        color: whitesmoke;
-                    }
-                }
-                .name {
-                    font-weight: 600;
-                    color: #727272;
-                    margin-bottom: 5px;
-                }
-                .more-info {
-                    font-size: 14px;
-                    span {
-                        color: #727272;
-                    }
-                }
-            }
-        }
-        .slide:hover {
-            border-color: #3dbffc;
         }
     }
 
@@ -171,11 +103,6 @@ main {
                 }
             }
         }
-        ::ng-deep {
-            .slide {
-                margin: 0;
-            }
-        }
     }
 
     @media screen and (max-width: 600px) {
@@ -197,10 +124,13 @@ main {
             margin-bottom: 15px;
         }
         .plyr--video .plyr__controls {
-            padding: 10px !important;
-            padding: var(--plyr-control-spacing, 10px) !important;
-            padding-top: 35px !important;
-            padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5) !important;
+            // padding: 10px !important;
+            // padding: var(--plyr-control-spacing, 10px) !important;
+            // padding-top: 35px !important;
+            // padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5) !important;
+            width: 143vh;
+            position: absolute;
+            left: 10%;
         }
         .title {
             position: absolute;
@@ -294,6 +224,44 @@ main {
         }
         .plyr__progress__buffer {
             top: 31px;
+        }
+    }
+}
+
+.card {
+    background: #222;
+    color: rgba(250, 250, 250, 0.8);
+    border-radius: 25px;
+    margin: 0 5px;
+}
+.card:hover {
+    border: 4px solid aquamarine;
+}
+.card-video-top {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 173px !important;
+}
+.card-body {
+    padding: 25px 20px 20px;
+    background: #1a1a1a;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    .head {
+        h3 {
+            font-size: 18px;
+            color: whitesmoke;
+        }
+    }
+    .name {
+        font-weight: 600;
+        color: #727272;
+        margin-bottom: 5px;
+    }
+    .more-info {
+        font-size: 14px;
+        span {
+            color: #727272;
         }
     }
 }

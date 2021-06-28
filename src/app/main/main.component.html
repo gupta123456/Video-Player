@@ -1,9 +1,7 @@
-<main>
-    <video id="plyrID" playsinline controls poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" [src]="url">
-        <!-- <source [src]="url" type="video/mp4" /> -->
-    </video>
+<main class="container">
+    <video id="plyrID" playsinline controls poster="../../assets/images/video-img.jpg" [src]="url"></video>
     <app-video-info></app-video-info>
-    <div class="video-section">
+    <div class="video-section container">
         <div class="sec-head">
             <div class="head-txt">
                 <div class="pipe"></div>
@@ -24,18 +22,14 @@
         <owl-carousel-o [options]="customOptions" #owl>
             <ng-container *ngFor="let data of videoList;let i=index">
                 <ng-template carouselSlide>
-                    <div class="slide">
-                        <div class="image">
-                            <span (click)="passURL(data.url)">
-                                <video [src]="data.url" class="pointer" [poster]="data.imagePreview" (mouseenter)="mouseEnter(i,'video')" class="video{{i}}"
-                                    (mouseleave)="mouseLeave(i,'video')">
-                                </video>
-                            </span>
-                            <span class="bottom-left">
-                                <img src="assets/images/profile.jpg">
-                            </span>
-                        </div>
-                        <div class="details">
+                    <div class="card">
+                        <span (click)="passURL(data.url)">
+                            <video [src]="data.url" class="pointer" [poster]="data.imagePreview"
+                                (mouseenter)="mouseEnter(i,'video')" class="video{{i}} card-video-top"
+                                (mouseleave)="mouseLeave(i,'video')">
+                            </video>
+                        </span>
+                        <div class="card-body">
                             <div class="head">
                                 <h3>{{data.title}}</h3>
                             </div>
@@ -53,7 +47,7 @@
             </ng-container>
         </owl-carousel-o>
     </div>
-    <div class="video-section">
+    <div class="video-section container">
         <div class="sec-head">
             <div class="head-txt">
                 <div class="pipe"></div>
@@ -74,19 +68,14 @@
         <owl-carousel-o [options]="customOptions1" #owl1>
             <ng-container *ngFor="let data of VideoList;let i=index">
                 <ng-template carouselSlide>
-                    <div class="slide">
-                        <div class="image">
-                            <span (click)="passURL(data.url)">
-                                <video [src]="data.url" class="pointer" width="200" height="120" [poster]="data.imagePreview"
-                                    class="Video{{i}}" (mouseenter)="mouseEnter(i,'Video')"
-                                    (mouseleave)="mouseLeave(i,'Video')">
-                                </video>
-                            </span>
-                            <span class="bottom-left">
-                                <img src="assets/images/profile.jpg" alt="Debut Infotech">
-                            </span>
-                        </div>
-                        <div class="details">
+                    <div class="card">
+                        <span (click)="passURL(data.url)">
+                            <video [src]="data.url" class="pointer" [poster]="data.imagePreview"
+                                (mouseenter)="mouseEnter(i,'video')" class="video{{i}} card-video-top"
+                                (mouseleave)="mouseLeave(i,'video')">
+                            </video>
+                        </span>
+                        <div class="card-body">
                             <div class="head">
                                 <h3>{{data.title}}</h3>
                             </div>
