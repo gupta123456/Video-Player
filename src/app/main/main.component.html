@@ -1,4 +1,4 @@
-<main class="container">
+<main>
     <video id="plyrID" playsinline controls poster="../../assets/images/video-img.jpg" [src]="url"></video>
     <app-video-info></app-video-info>
     <div class="video-section container">
@@ -28,6 +28,9 @@
                                 (mouseenter)="mouseEnter(i,'video')" class="video{{i}} card-video-top"
                                 (mouseleave)="mouseLeave(i,'video')">
                             </video>
+                        </span>
+                        <span class="profile-pic">
+                            <img src="../../assets/images/profile.jpg">
                         </span>
                         <div class="card-body">
                             <div class="head">
@@ -74,6 +77,9 @@
                                 (mouseenter)="mouseEnter(i,'video')" class="video{{i}} card-video-top"
                                 (mouseleave)="mouseLeave(i,'video')">
                             </video>
+                        </span>
+                        <span class="profile-pic">
+                            <img src="../../assets/images/profile.jpg">
                         </span>
                         <div class="card-body">
                             <div class="head">

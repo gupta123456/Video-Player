@@ -124,13 +124,13 @@ main {
             margin-bottom: 15px;
         }
         .plyr--video .plyr__controls {
-            // padding: 10px !important;
-            // padding: var(--plyr-control-spacing, 10px) !important;
-            // padding-top: 35px !important;
-            // padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5) !important;
-            width: 143vh;
-            position: absolute;
-            left: 10%;
+            padding: 10px !important;
+            padding: var(--plyr-control-spacing, 10px) !important;
+            padding-top: 35px !important;
+            padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5) !important;
+            // width: 143vh;
+            // position: absolute;
+            // left: 10%;
         }
         .title {
             position: absolute;
@@ -264,4 +264,18 @@ main {
             color: #727272;
         }
     }
+}
+.profile-pic{
+    padding: 0;
+    display: block;
+    position: absolute;
+    bottom: 110px;
+    left: 15px;
+    border: 2px solid #1a1a1a;
+    border-radius: 100%;
+}
+.profile-pic img {
+    width: 40px !important;
+    border-radius: 50% !important;
+    height: 35px !important;
 }
