@@ -34,8 +34,11 @@ export class MainComponent implements OnInit {
         items: 3,
       },
       1100: {
-        items: 4,
+        items: 3,
       },
+      1366: {
+        items: 4
+      }
     },
   }
 
@@ -59,8 +62,11 @@ export class MainComponent implements OnInit {
         items: 3,
       },
       1100: {
-        items: 4,
+        items: 3,
       },
+      1366: {
+        items: 4
+      }
     },
   }
   constructor() {
@@ -72,49 +78,49 @@ export class MainComponent implements OnInit {
       {
         "title": "Money Heist",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": "909,279",
         "date": "23 Feb 2021"
       },
       {
         "title": "Narcos",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": 1.20 + "M",
         "date": "21 Feb 2021"
       },
       {
         "title": "Breaking bad",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": 1.94 + "B",
         "date": "23 Mar 2021"
       },
       {
         "title": "Dark",
         "url": "https://reelvillevideos.s3.us-west-1.amazonaws.com/reelvillevideos30+Minutes+of+DOMINOES+FALLING%21+-+Most+Satisfying+ASMR+Compilation+%281%29.mp4",
-        "imagePreview": "../../assets/images/justin.webp",
+        "image": "../../assets/images/justin.webp",
         "views": 1.5 + "M",
         "date": "12 Jan 2021"
       },
       {
         "title": "Money Heist",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": "909,279",
         "date": "23 Feb 2021"
       },
       {
         "title": "Narcos",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": 1.20 + "M",
         "date": "21 Feb 2021"
       },
       {
         "title": "Breaking bad",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": 1.94 + "B",
         "date": "23 Mar 2021"
       },
@@ -124,49 +130,49 @@ export class MainComponent implements OnInit {
       {
         "title": "Money Heist",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": "909,279",
         "date": "23 Feb 2021"
       },
       {
         "title": "Narcos",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": 1.20 + "M",
         "date": "21 Feb 2021"
       },
       {
         "title": "Breaking bad",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": 1.94 + "B",
         "date": "23 Mar 2021"
       },
       {
         "title": "Dark",
         "url": "https://reelvillevideos.s3.us-west-1.amazonaws.com/reelvillevideos30+Minutes+of+DOMINOES+FALLING%21+-+Most+Satisfying+ASMR+Compilation+%281%29.mp4",
-        "imagePreview": "../../assets/images/justin.webp",
+        "image": "../../assets/images/justin.webp",
         "views": 1.5 + "M",
         "date": "12 Jan 2021"
       },
       {
         "title": "Money Heist",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": "909,279",
         "date": "23 Feb 2021"
       },
       {
         "title": "Narcos",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": 1.20 + "M",
         "date": "21 Feb 2021"
       },
       {
         "title": "Breaking bad",
         "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-        "imagePreview": "../../assets/images/music.jpg",
+        "image": "../../assets/images/music.jpg",
         "views": 1.94 + "B",
         "date": "23 Mar 2021"
       },
@@ -225,43 +231,29 @@ export class MainComponent implements OnInit {
   }
 
   passURL(url) {
-    console.log(url);
     this.url = url;
     window.scroll(0, 0);
     this.player.play();
   }
 
-  promise;
-  mouseEnter(i, listType) {
-    try {
-      this.listVideo = document.querySelector("." + listType + i);
-      this.promise = this.listVideo.play();
-      this.listVideo.volume = 0;
+  play(i, listType) {
+    this.listVideo = document.querySelector("." + listType + i);
+    this.listVideo.play();
+    this.listVideo.volume = 0;
+    this.listVideo.currentTime = 10;
+    this.interval = setInterval(() => {
+      console.log("setTimeOut");
       this.listVideo.currentTime = 10;
-      this.interval = setInterval(() => {
-        console.log("setTimeOut");
-        this.listVideo.currentTime = 10;
-      }, 5000)
-    }
-    catch (e) {
-      console.log(e);
-    }
+    }, 5000)
 
   }
 
-  mouseLeave(i, listType) {
-    try {
-      clearInterval(this.interval);
-      this.listVideo = document.querySelector("." + listType + i);
-      this.promise.then(() => {
-        this.listVideo.pause();
-      })
-      this.listVideo.currentTime = 0;
-      this.listVideo.volume = 0;
-    }
-    catch (error) {
-      console.log(error);
-    }
+  stop(i, listType) {
+    clearInterval(this.interval);
+    this.listVideo = document.querySelector("." + listType + i);
+    this.listVideo.pause();
+    this.listVideo.currentTime = 0;
+    this.listVideo.volume = 0;
   }
 
 }

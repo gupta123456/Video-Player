@@ -24,9 +24,9 @@
                 <ng-template carouselSlide>
                     <div class="card">
                         <span (click)="passURL(data.url)">
-                            <video [src]="data.url" class="pointer" [poster]="data.imagePreview"
-                                (mouseenter)="mouseEnter(i,'video')" class="video{{i}} card-video-top"
-                                (mouseleave)="mouseLeave(i,'video')">
+                            <video [src]="data.url" class="pointer" [poster]="data.image"
+                                (mouseenter)="play(i,'video')" class="video{{i}} card-video-top"
+                                (mouseleave)="stop(i,'video')">
                             </video>
                         </span>
                         <span class="profile-pic">
@@ -73,9 +73,9 @@
                 <ng-template carouselSlide>
                     <div class="card">
                         <span (click)="passURL(data.url)">
-                            <video [src]="data.url" class="pointer" [poster]="data.imagePreview"
-                                (mouseenter)="mouseEnter(i,'video')" class="video{{i}} card-video-top"
-                                (mouseleave)="mouseLeave(i,'video')">
+                            <video [src]="data.url" class="pointer" [poster]="data.image"
+                                (mouseenter)="play(i,'video')" class="video{{i}} card-video-top"
+                                (mouseleave)="stop(i,'video')">
                             </video>
                         </span>
                         <span class="profile-pic">
