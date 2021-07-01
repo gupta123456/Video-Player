@@ -115,6 +115,17 @@ main {
         }
     }
 
+    @media only screen and (min-width: 480px) {
+        ::ng-deep {
+            .plyr {
+                .plyr__controls {
+                    padding: var(--plyr-control-spacing, 10px) !important;
+                    padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5) !important;
+                }
+            }
+        }
+    }
+
     ::ng-deep {
         label {
             margin-bottom: 0px;
@@ -124,13 +135,18 @@ main {
             margin-bottom: 15px;
         }
         .plyr--video .plyr__controls {
-            padding: 10px !important;
-            padding: var(--plyr-control-spacing, 10px) !important;
-            padding-top: 35px !important;
-            padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5) !important;
-            // width: 143vh;
-            // position: absolute;
-            // left: 10%;
+            // padding: var(--plyr-control-spacing, 10px);
+            // padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5) !important;
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            text-align: center;
+            z-index: 3;
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+            position: absolute;
+            left: 0;
+            right: 0;
         }
         .title {
             position: absolute;
@@ -138,6 +154,10 @@ main {
             left: 0;
             color: #fff;
             padding: 20px;
+        }
+        .plyr__video-wrapper .plyr__poster {
+            background-size: cover !important;
+            width: 100% !important;
         }
         .plyr--hide-controls .title {
             opacity: 0;
@@ -265,7 +285,7 @@ main {
         }
     }
 }
-.profile-pic{
+.profile-pic {
     padding: 0;
     display: block;
     position: absolute;
