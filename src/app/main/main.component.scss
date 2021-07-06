@@ -45,25 +45,6 @@ main {
             color: whitesmoke;
         }
     }
-    ::ng-deep {
-        .owl-dots {
-            display: none;
-        }
-        .owl-item {
-            width: 325px !important;
-            height: 330px !important;
-        }
-        .owl-carousel .owl-item img {
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
-            height: 220px;
-            width: 100%;
-        }
-        .owl-theme .owl-nav {
-            display: none;
-        }
-    }
-
     @media only screen and (max-width: 768px) {
         .heading p {
             padding-left: 10px;
@@ -113,8 +94,13 @@ main {
                 }
             }
         }
+        ::ng-deep {
+            .slide {
+                margin: 0 7px;
+            }
+        }
     }
-    video{
+    video {
         height: 85vh;
     }
 
@@ -138,8 +124,6 @@ main {
             margin-bottom: 15px;
         }
         .plyr--video .plyr__controls {
-            // padding: var(--plyr-control-spacing, 10px);
-            // padding-top: calc(var(--plyr-control-spacing, 10px) * 3.5) !important;
             align-items: center;
             display: flex;
             justify-content: flex-end;
@@ -249,56 +233,84 @@ main {
             top: 31px;
         }
     }
-}
-
-.card {
-    background: #222;
-    color: rgba(250, 250, 250, 0.8);
-    border-radius: 25px;
-    margin: 0 5px;
-}
-.card:hover {
-    border: 4px solid aquamarine;
-}
-.card-video-top {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    height: 173px !important;
-}
-.card-body {
-    padding: 25px 20px 20px;
-    background: #1a1a1a;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    ::ng-deep {
+        .owl-carousel .owl-item img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 190px;
+            width: 100%;
+        }
+        .owl-theme .owl-nav {
+            display: none;
+        }
+        .slide {
+            margin-right: 10px;
+            border: 4px solid #0b0b0d;
+            border-radius: 10px;
+            .image {
+                position: relative;
+                height: 200px;
+                img {
+                    height: 100%;
+                }
+                video {
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .image:hover {
+                img {
+                    display: none;
+                }
+                video {
+                    display: block;
+                }
+            }
+            .profile-pic {
+                padding: 0;
+                display: block;
+                position: absolute;
+                bottom: -18px;
+                left: 15px;
+                border: 2px solid #1a1a1a;
+                border-radius: 100%;
+                img {
+                    width: 40px;
+                    border-radius: 50%;
+                    height: 35px;
+                }
+            }
+            .details {
+                padding: 25px 20px 20px;
+                background: #1a1a1a;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                .head {
+                    h3 {
+                        font-size: 18px;
+                    }
+                }
+                .name {
+                    font-weight: 600;
+                    color: #727272;
+                    margin-bottom: 5px;
+                }
+                .more-info {
+                    font-size: 14px;
+                    span {
+                        color: #727272;
+                    }
+                }
+            }
+        }
+        .slide:hover {
+            border-color: #3dbffc;
+        }
+    }
     .head {
         h3 {
-            font-size: 18px;
             color: whitesmoke;
         }
     }
-    .name {
-        font-weight: 600;
-        color: #727272;
-        margin-bottom: 5px;
-    }
-    .more-info {
-        font-size: 14px;
-        span {
-            color: #727272;
-        }
-    }
-}
-.profile-pic {
-    padding: 0;
-    display: block;
-    position: absolute;
-    bottom: 110px;
-    left: 15px;
-    border: 2px solid #1a1a1a;
-    border-radius: 100%;
-}
-.profile-pic img {
-    width: 40px !important;
-    border-radius: 50% !important;
-    height: 35px !important;
 }
