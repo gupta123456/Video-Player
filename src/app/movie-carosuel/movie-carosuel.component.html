@@ -1,0 +1,50 @@
+<div class="video-section">
+    <div class="sec-head">
+        <div class="head-txt">
+            <div class="pipe"></div>
+            <h2>{{sectionhead}}</h2>
+        </div>
+        <div class="link">
+            <span class="car-nav">
+                <span class="left">
+                    <img src="assets/images/left-arrow.png" alt="" class="prev" (click)="owl.prev()">
+                </span>
+                <span class="right">
+                    <img src="assets/images/right-arrow.png" alt="" class="prev" (click)="owl.next()">
+                </span>
+            </span>
+            <span class="see-all"> See all </span>
+        </div>
+    </div>
+    <owl-carousel-o [options]="customOptions" #owl>
+        <ng-container *ngFor="let movie of videoList;">
+            <ng-template carouselSlide>
+                <div class="slide" (click)="getMovie(movie)">
+                    <div class="image">
+                        <img [src]="movie.image">
+                        <video id="hover-video" preload muted="muted" #video (mouseover)="videoController(true, video)"
+                            (mouseleave)="videoController(false, video)">
+                            <source [src]="movie.url" type="video/mp4">
+                        </video>
+                        <span class="profile-pic">
+                            <img src="assets/images/profile.jpg" alt="Debut Infotech">
+                        </span>
+                    </div>
+                    <div class="details">
+                        <div class="head">
+                            <h3>{{movie.title}}</h3>
+                        </div>
+                        <div class="name">
+                            {{movie.title}}
+                        </div>
+                        <div class="more-info">
+                            <span class="views"> {{movie.views}} views </span>
+                            <span class="pipe"> | </span>
+                            <span class="date"> {{movie.date}} </span>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+</div>

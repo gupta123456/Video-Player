@@ -10,12 +10,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { VideoInfoComponent } from './video-info/video-info.component';
+import { MovieCarosuelComponent } from './movie-carosuel/movie-carosuel.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     HeaderComponent,
-    VideoInfoComponent
+    VideoInfoComponent,
+    MovieCarosuelComponent
   ],
   imports: [
     BrowserModule,
