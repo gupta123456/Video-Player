@@ -1,24 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
-import {CustomHTMLDirective} from '../custom-html.directive';
+import { Directive, Input, ElementRef,OnInit  } from '@angular/core';
 declare var Plyr;
 
-@Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+@Directive({
+  selector: '[appCustomHTML]'
 })
-export class MainComponent implements OnInit {
+export class CustomHTMLDirective {
 
-  url: any;
-  player: any;
-  interval;
-  listVideo;
-  constructor() {
-  }
-
-  ngOnInit(): void {
-    this.url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4";
-
+  player;
+  @Input() appCustomHTML: 'string'
+  constructor(private el: ElementRef) {
     const controls = `
     <div class="plyr__controls">
     <div class="top-control">
@@ -94,23 +84,10 @@ export class MainComponent implements OnInit {
 </button>
 `;
     this.player = new Plyr('#plyrID', { controls });
-
   }
 
-  passURL(url) {
-    this.url = url;
-    window.scroll(0, 0);
-    this.player.play();
-  }
-
-  videoController(isHovering, video) {
-    if (isHovering) {
-      video.muted = true;
-      video.play();
-    }
-    else {
-      video.pause();
-    }
+  ngOnInit() {
+    this.el.nativeElement.classList.add(this.appCustomHTML);
   }
 
 }

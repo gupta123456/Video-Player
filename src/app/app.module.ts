@@ -11,13 +11,15 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { VideoInfoComponent } from './video-info/video-info.component';
 import { MovieCarosuelComponent } from './movie-carosuel/movie-carosuel.component';
+import { CustomHTMLDirective } from './custom-html.directive';
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     HeaderComponent,
     VideoInfoComponent,
-    MovieCarosuelComponent
+    MovieCarosuelComponent,
+    CustomHTMLDirective
   ],
   imports: [
     BrowserModule,

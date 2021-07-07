@@ -7,7 +7,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class MovieCarosuelComponent implements OnInit {
 
-  videoList
+  videoList = [];
   @Input() sectionhead: string;
   customOptions: any = {
     rewind: false,
