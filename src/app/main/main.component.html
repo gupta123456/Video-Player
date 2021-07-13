@@ -1,6 +1,6 @@
 <main>
     <video id="plyrID" playsinline controls poster="assets/images/video-img.jpg" [src]="url"></video>
     <app-video-info></app-video-info>
-    <app-movie-carosuel [sectionhead]="'Top Videos/Random Videos'"></app-movie-carosuel>
-    <app-movie-carosuel [sectionhead]="'Opinion Videos'"></app-movie-carosuel>
+    <app-movie-carosuel [sectionhead]="'Top Videos/Random Videos'" [videoList]="videoList"></app-movie-carosuel>
+    <app-movie-carosuel [sectionhead]="'Opinion Videos'" [videoList]="videoList"></app-movie-carosuel>
 </main>
